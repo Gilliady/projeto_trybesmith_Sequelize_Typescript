@@ -1,3 +1,4 @@
-import productService from './product.service';
+import * as productService from './product.service';
+import * as orderService from './order.service';
 
-export default { productService };
+export { productService, orderService };

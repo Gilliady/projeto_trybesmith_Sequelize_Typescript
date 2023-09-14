@@ -1,5 +1,7 @@
 import productsRoute from './products.routes';
+import orderRoute from './orders.routes';
 
-export default {
+export {
   productsRoute,
+  orderRoute,
 };
