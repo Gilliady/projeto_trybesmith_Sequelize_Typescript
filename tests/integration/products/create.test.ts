@@ -13,7 +13,6 @@ describe('POST /products', function () {
     const product: Product = { name: 'Product 1', price: '10 moedas de bronze', orderId: 1 };
     sinon.stub(ProductModel, 'create').resolves(ProductModel.build({...product, id: 1 }));
     const response = await chai.request(app).post('/products').send(product);
-    console.log(response);
     expect(response.status).to.equal(201);
     expect(response.body).to.have.property('id', 1);
     expect(response.body).to.have.property('name', product.name);

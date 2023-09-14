@@ -6,6 +6,12 @@ async function createProduct(product: ProductInputtableTypes): ProductReturn {
   return { status: 'CREATED', data: createdProduct };
 }
 
+async function getProducts(): ProductReturn {
+  const products = await ProductModel.findAll();
+  return { status: 'SUCCESSFUL', data: products };
+}
+
 export default {
   createProduct,
+  getProducts,
 };
