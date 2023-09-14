@@ -16,3 +16,11 @@ export type OrderReturn = Promise<{
   status: keyof Status,
   data: object | object[]
 }>;
+
+export type LoginReturn = {
+  status: keyof Status;
+  data: {
+    token?: string;
+    message?: string;
+  };
+};

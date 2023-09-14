@@ -17,7 +17,7 @@ export const getOrders = async (): OrderReturn => {
     .map((order) => ({
       ...order,
       productIds: order
-        .productIds?.map((product) => product.id),
+        .productIds?.map(({ id }) => id),
     }));
 
   return { status: 'SUCCESSFUL', data: ordersJSON };
